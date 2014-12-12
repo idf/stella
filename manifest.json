@@ -1,0 +1,23 @@
+{
+	"name": "Repo Star Watcher",
+		"icons": {
+			"16" : "fluidicon.png",
+			"24" : "fluidicon.png",
+			"32" : "fluidicon.png",
+			"128": "fluidicon.png"
+		},
+		"version": "1",
+		"manifest_version": 2,
+        "options_page": "options.html",
+		"permissions": [
+            "tabs",
+			"notifications",
+			"https://api.github.com/",
+            "storage"
+            ],
+		"description": "View your github stars!",
+		"background": {
+			"scripts": ["background.js"]
+		}
+
+}
