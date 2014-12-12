@@ -1,5 +1,5 @@
 #Stella
-Chrome Extension - Notifications of your new github stars!  
+Chrome Extension - Notifications of your new GitHub stars!  
 Available at [Chrome Web Store](https://chrome.google.com/webstore/detail/stella/apocfjbimldhgkaboebpfgngkefmiaoa)  
 ![pic](./fluidicon128.png)
 
@@ -9,7 +9,7 @@ Welcome notification:
 ![pic](./screenshots/welcome.png)
 
 ###Options
-Configure your github username here:  
+Configure your GitHub username here:  
 ![pic](./screenshots/config_username.png)
 
 ###Notification
