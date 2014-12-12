@@ -1,6 +1,8 @@
 #Stella
 Chrome Extension - Notifications of your new github stars!  
-Available at [Chrome Web Store](https://chrome.google.com/webstore/detail/stella/apocfjbimldhgkaboebpfgngkefmiaoa)
+Available at [Chrome Web Store](https://chrome.google.com/webstore/detail/stella/apocfjbimldhgkaboebpfgngkefmiaoa)  
+![pic](./fluidicon128.png)
+
 #Screenshots
 ###Welcome
 Welcome notification:  
