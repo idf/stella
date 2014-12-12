@@ -1,5 +1,5 @@
 {
-	"name": "Repo Star Watcher",
+	"name": "Stella",
 		"icons": {
 			"16" : "fluidicon.png",
 			"24" : "fluidicon.png",
@@ -15,7 +15,7 @@
 			"https://api.github.com/",
             "storage"
             ],
-		"description": "View your github stars!",
+		"description": "Notifications of your new github stars!",
 		"background": {
 			"scripts": ["background.js"]
 		}

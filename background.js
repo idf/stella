@@ -1,4 +1,4 @@
-timeIntervelIdle = 300*1000;  //ms 
+timeIntervelIdle = 120*1000;  //ms 
 timeIntervel = timeIntervelIdle;
 var repos = [];
 
@@ -18,7 +18,7 @@ function check_star(repo) {
 }
 
 function show(repo, oldStars, newStars) {
-    var title = "New star!";
+    var title = "Stella: new star!";
     var message;
     if (newStars > oldStars) {
         var difference = newStars-oldStars;
@@ -102,8 +102,8 @@ function main() {
 
 function welcome() {
     Notification.requestPermission(function() {
-        var msg = "Welcome to GitHub Star Watcher. Configure it at here";
-        var notification = new Notification("Welcome", {body: msg, icon: './fluidicon.png'});
+        var msg = "Welcome to Stella. Get Notifications of your new github stars! Configure it at here";
+        var notification = new Notification("Stella: welcome", {body: msg, icon: './fluidicon.png'});
         notification.onclick = function () {
             chrome.tabs.create({
                 url: chrome.extension.getURL("options.html")
