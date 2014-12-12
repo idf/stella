@@ -50,7 +50,7 @@ function show(repo, oldStars, newStars) {
 function notify(repo, newStars) {
     var oldStars = localStorage.getItem(repo);
     if(oldStars===null) {
-        oldStars=0;
+        localStorage.setItem(repo, newStars);
     }
     if (newStars > oldStars) {
         show(repo, oldStars, newStars);
@@ -117,4 +117,5 @@ function welcome() {
 }
 
 welcome();
+main();
 setInterval(function(){main();}, timeIntervel);
