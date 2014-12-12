@@ -52,7 +52,7 @@ function notify(repo, newStars) {
     if(oldStars===null) {
         localStorage.setItem(repo, newStars);
     }
-    if (newStars > oldStars) {
+    else if (newStars > oldStars) {
         show(repo, oldStars, newStars);
         localStorage.setItem(repo, newStars);
     }
