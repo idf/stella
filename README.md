@@ -1,6 +1,6 @@
 #Stella
-Chrome Extension - Notifications of your new github stars!
-
+Chrome Extension - Notifications of your new github stars!  
+Available at [Chrome Web Store](https://chrome.google.com/webstore/detail/stella/apocfjbimldhgkaboebpfgngkefmiaoa)
 #Screenshots
 ###Welcome
 Welcome notification:  
