@@ -94,7 +94,10 @@ function main() {
     chrome.storage.sync.get("username", function(data) {
         var username = "zhangdanyangg";
         console.log(data);
-        if(data) username=data["username"];
+        if(data["username"]) 
+            username=data["username"];
+        else
+            welcome(); 
         get_repo(username)
         }
     );
@@ -116,6 +119,5 @@ function welcome() {
     });
 }
 
-welcome();
 main();
 setInterval(function(){main();}, timeIntervel);

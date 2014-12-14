@@ -17,7 +17,8 @@ document.getElementById("save").addEventListener("click", save_options);
 chrome.storage.sync.get("username", function(data) {
   var msg = "Not yet set";
   console.log(data);
-  if(data["username"]) msg=data["username"];
+  if(data["username"]) 
+    msg=data["username"];
   document.getElementById("username").placeholder = msg;
   }
 );
