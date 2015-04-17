@@ -29,21 +29,20 @@ function show(repo, oldStars, newStars) {
           message = difference+' new stars at '+repo+'! Currently '+newStars+' stars now!'; 
         }                        
 
-        Notification.requestPermission(function() {
-            var notification = new Notification(title, {body: message, icon: './fluidicon.png'});
-            if(title=="Welcome") {
-                clearInterval(intervalBusy);  
-            }
-            notification.onclick = function () {
-                chrome.tabs.create({
-                    url: "https://github.com/"+repo
-                });
-                this.cancel();
-            };
-            notification.onclose = function (){
-                this.cancel();
-            };
-        });
+        var notification = new Notification(title, {"body": message, "icon": './fluidicon.png'});
+        if(title=="Welcome") {
+            clearInterval(intervalBusy);  
+        }
+        
+        notification.onclick = function () {
+            chrome.tabs.create({
+                url: "https://github.com/"+repo
+            });
+            this.cancel();
+        };
+        notification.onclose = function (){
+            this.cancel();
+        };
     } 
 }
 
@@ -92,7 +91,7 @@ function get_repo(username) {
 
 function main() {
     chrome.storage.sync.get("username", function(data) {
-        var username = "zhangdanyangg";
+        var username = "idf";
         console.log(data);
         if(data["username"]) 
             username=data["username"];
@@ -104,19 +103,18 @@ function main() {
 }
 
 function welcome() {
-    Notification.requestPermission(function() {
-        var msg = "Welcome to Stella. Get Notifications of your new github stars! Configure it at here";
-        var notification = new Notification("Stella: welcome", {body: msg, icon: './fluidicon.png'});
-        notification.onclick = function () {
-            chrome.tabs.create({
-                url: chrome.extension.getURL("options.html")
-            });
-            this.cancel();
-        };
-        notification.onclose = function (){
-            this.cancel();
-        };
-    });
+    var msg = "Welcome to Stella. Get Notifications of your new github stars! Configure it at here";
+    var notification = new Notification("Stella: welcome", {"body": msg, "icon": './fluidicon.png'});
+
+    notification.onclick = function () {
+        chrome.tabs.create({
+            url: chrome.extension.getURL("options.html")
+        });
+        this.cancel();
+    };
+    notification.onclose = function (){
+        this.cancel();
+    };
 }
 
 main();
