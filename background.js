@@ -38,10 +38,9 @@ function show(repo, oldStars, newStars) {
             chrome.tabs.create({
                 url: "https://github.com/"+repo
             });
-            this.cancel();
         };
         notification.onclose = function (){
-            this.cancel();
+            // pass 
         };
     } 
 }
@@ -110,10 +109,9 @@ function welcome() {
         chrome.tabs.create({
             url: chrome.extension.getURL("options.html")
         });
-        this.cancel();
     };
     notification.onclose = function (){
-        this.cancel();
+        // pass 
     };
 }
 
